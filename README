@@ -1,3 +1,17 @@
+实现了网页自动调用摄像头扫码功能
+实现了输出二维码字符流的功能
+可以将字符流传到后台用译码算法处理。
+对于网站开发扫码功能提高算法效率有一定的帮助。
+
+另外，针对自主码web扫码有2种方式：
+1. 将图片传到后台处理
+2. 将图片读取字符流，传字符流到后台处理
+
+很明显，第二种方法要快一些，该前端库，便是基于此。
+
+
+
+基于
 JavaScript QRCode reader for HTML5 enabled browser.
 2011 Lazar Laszlo  http://lazarsoft.info
 
@@ -5,32 +19,4 @@ Try it online: http://webqr.com
 
 This is a port of ZXing qrcode scanner, http://code.google.com/p/zxing.
 
-Usage:
 
-Include the scripts in the following order:
-
-<script type="text/javascript" src="grid.js"></script>
-<script type="text/javascript" src="version.js"></script>
-<script type="text/javascript" src="detector.js"></script>
-<script type="text/javascript" src="formatinf.js"></script>
-<script type="text/javascript" src="errorlevel.js"></script>
-<script type="text/javascript" src="bitmat.js"></script>
-<script type="text/javascript" src="datablock.js"></script>
-<script type="text/javascript" src="bmparser.js"></script>
-<script type="text/javascript" src="datamask.js"></script>
-<script type="text/javascript" src="rsdecoder.js"></script>
-<script type="text/javascript" src="gf256poly.js"></script>
-<script type="text/javascript" src="gf256.js"></script>
-<script type="text/javascript" src="decoder.js"></script>
-<script type="text/javascript" src="qrcode.js"></script>
-<script type="text/javascript" src="findpat.js"></script>
-<script type="text/javascript" src="alignpat.js"></script>
-<script type="text/javascript" src="databr.js"></script>
-
-Set qrcode.callback to function "func(data)", where data will get the decoded information.
-
-Decode image with: qrcode.decode(url or DataURL).
-Decode from canvas with "qr-canvas" ID: qrcode.decode()
-
-[new from 2014.01.09]
-For webcam qrcode decoding (included in the test.html) you will need a browser with getUserMedia (WebRTC) capability.
